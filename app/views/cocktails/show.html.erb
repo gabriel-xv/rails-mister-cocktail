@@ -1,1 +1,5 @@
-show.html.erb
+<h1><%= @cocktail.name %></h1>
+
+<%= link_to 'Add new dose', new_cocktail_dose_path(@cocktail) %>
+
+<%= link_to 'Go back', cocktails_path %>
