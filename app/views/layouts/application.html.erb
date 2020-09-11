@@ -12,8 +12,11 @@
   </head>
 
   <body>
-    <div class="container">
-     <%= yield %>
+    <div class="container w-75">
+      <nav class="navbar sticky-top navbar-dark bg-dark p-3 mb-2">
+        <%= link_to 'New Cocktail', new_cocktail_path, class: "btn btn-outline-light text-white" %>
+      </nav>
+      <%= yield %>
     </div>
   </body>
 </html>

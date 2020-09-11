@@ -1,22 +1,18 @@
-<div class="banner" style="background-image: linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.4)), url(https://raw.githubusercontent.com/lewagon/fullstack-images/master/uikit/background.png);">
+<div class="banner" style="background-image: linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.4)), url(../../assets/images/AA031.jpg);">
   <div class="container">
     <h1>This is the Cocktail Index</h1>
   </div>
 </div>
 
-<ul>
-
   <div class="cards">
     <% @cocktails.each do |cocktail| %>
-      <i>
-        <div class="card-category" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url(https://raw.githubusercontent.com/lewagon/fullstack-images/master/uikit/breakfast.jpg)">
-          <%= link_to cocktail.name, cocktail_path(cocktail.id) %>
+      <%= link_to cocktail_path(cocktail.id) do %>
+        <div class="card-category" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url(https://source.unsplash.com/featured/?cocktail)">
+          <%= cocktail.name %>
         </div>
-      </i>
+      <% end %>
     <% end %>
   </div>
-</ul>
 
-<button type="button" class="btn btn-danger align-center">
-  <%= link_to 'New Cocktail', new_cocktail_path %>
-</button>
+
+

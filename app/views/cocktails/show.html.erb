@@ -14,12 +14,7 @@
   <% end %>
 
   <div class="buttons mt-3">
-    <button type="button" class="btn btn-outline-success">
-      <%= link_to 'Add new dose', new_cocktail_dose_path(@cocktail) %>
-    </button>
-
-    <button type="button" class="btn btn-outline-dark ml-3">
-      <%= link_to 'Go back', cocktails_path %>
-    </button>
+      <%= link_to 'Add new dose', new_cocktail_dose_path(@cocktail), class: "btn btn-outline-success" %>
+      <%= link_to 'Go back', cocktails_path, class: "btn btn-outline-dark ml-3" %>
   </div>
 </div>
